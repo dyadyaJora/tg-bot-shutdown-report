@@ -13,7 +13,7 @@ def _map_data_object_to_table_row(data: Report):
 
 
 def _map_is_unknown(x):
-    return 'Неизвестно' if x is None else x
+    return 'Неизвестно' if x is None or len(x) == 0 else x
 
 
 class GoogleSheetStorageAdapter:
